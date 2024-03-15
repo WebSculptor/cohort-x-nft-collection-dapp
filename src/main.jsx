@@ -1,13 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Theme } from "@radix-ui/themes";
-import App from "./App.jsx";
-import "./index.css";
+
+import "./styles/index.css";
+import App from "./App";
+import { Toaster } from "./components/ui/sonner";
+import { configureWeb3Modal } from "./connections";
+
+configureWeb3Modal();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <React.StrictMode>
-        <Theme>
-            <App />
-        </Theme>
-    </React.StrictMode>
+  <React.StrictMode>
+    <Toaster />
+    <App />
+  </React.StrictMode>
 );
