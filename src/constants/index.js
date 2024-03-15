@@ -10,6 +10,13 @@ export const getProposalsContract = (providerOrSigner) =>
     providerOrSigner
   );
 
+export const getNFTsContract = (providerOrSigner) =>
+  new ethers.Contract(
+    VITE_BALLOT_CONTRACT_ADDRESS,
+    CONTRACT_ABI,
+    providerOrSigner
+  );
+
 // read only provider pointing to sepolia. It allows read only access to the sepolia blockchain
 export const readOnlyProvider = new ethers.JsonRpcProvider(VITE_RPC_URL);
 
